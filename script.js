@@ -1,4 +1,3 @@
-// Your web app's Firebase configuration (replace with your own)
 const firebaseConfig = {
     apiKey: "AIzaSyAbbPbqaJn2umZOZJ9TeYZHXXEvVBI0qeU",
     authDomain: "profile1-dde53.firebaseapp.com",
