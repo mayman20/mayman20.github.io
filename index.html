@@ -1,35 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C73W2W3BQT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('consent', 'update', {
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted',
-        'ad_storage': 'granted',
-        'analytics_storage': 'granted'
-        });
-      gtag('config', 'G-C73W2W3BQT');
-    </script>
-    <meta charset="UTF-8">
-    <title>User Profiles</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Joe May — software engineer. CS, University of Rhode Island '26. Projects in data engineering, trading systems, and full-stack web.">
+  <title>Joe May — Software Engineer</title>
+  <style>
+    :root {
+      --bg: #fdfdfc;
+      --fg: #1a1a1a;
+      --muted: #5c5c58;
+      --card: #f4f4f1;
+      --border: #e2e2dd;
+      --accent: #0b6e4f;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #131313;
+        --fg: #eaeae6;
+        --muted: #a0a09a;
+        --card: #1d1d1c;
+        --border: #2c2c2a;
+        --accent: #4cc38a;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 6rem;
+    }
+    h1 { font-size: 1.9rem; letter-spacing: -0.02em; }
+    .tagline { color: var(--muted); margin-top: 0.25rem; font-size: 1.05rem; }
+    .links { margin-top: 1rem; display: flex; gap: 1.25rem; flex-wrap: wrap; }
+    .links a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    .links a:hover { text-decoration: underline; }
+    section { margin-top: 3rem; }
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .about p { margin-bottom: 0.75rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.25rem;
+      margin-bottom: 0.9rem;
+    }
+    .card h3 { font-size: 1.05rem; }
+    .card h3 a { color: var(--fg); text-decoration: none; }
+    .card h3 a:hover { color: var(--accent); }
+    .card .stack { color: var(--muted); font-size: 0.85rem; margin-top: 0.1rem; }
+    .card p { margin-top: 0.5rem; font-size: 0.95rem; }
+    footer { margin-top: 4rem; color: var(--muted); font-size: 0.85rem; }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="https://drive.google.com/thumbnail?id=1CH8R27qNmvR6fyhA0BDoMCTn7Q_WvSm5" alt="Logo" class="logo">
-    </header>
-    <main>
-        <div id="userProfiles"></div>
-        <iframe src="https://thunkable.site/w/pf0D6i7I9EAwGOMetmGjb" title="Embedded Page"></iframe>
-    </main>
-    <script src="script.js"></script>
+  <header>
+    <h1>Joe May</h1>
+    <p class="tagline">Software engineer · BS Computer Science, University of Rhode Island '26</p>
+    <nav class="links">
+      <a href="https://github.com/mayman20">GitHub</a>
+      <a href="https://www.linkedin.com/in/joe-may-499a40369">LinkedIn</a>
+      <a href="mailto:jmayman2002@gmail.com">Email</a>
+    </nav>
+  </header>
+
+  <section class="about">
+    <h2>About</h2>
+    <p>I build data pipelines and backend systems in Python and TypeScript. Most of my work lives at the intersection of real-time data, automation, and things that have to keep running unattended — trading systems, booking platforms, monitoring services.</p>
+    <p>Recent CS grad (URI, May 2026, data science minor) with a semester of computer networks and databases at UNSW Sydney. Looking for software, data engineering, and analytics roles — Rhode Island, remote, or open to relocating.</p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="card">
+      <h3><a href="https://github.com/mayman20/algo-trading-platform">APE DEV — Algorithmic Trading Platform</a></h3>
+      <p class="stack">Python · GCP · IBKR · Alpaca · PostgreSQL</p>
+      <p>Research-to-execution platform for systematic trading: backtesting framework with in-sample/out-of-sample validation and negative controls, real-time data ingestion from three broker APIs, live paper-trade execution, and automated health monitoring with Telegram alerting.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/mayman20/captain-mikes-charters">Captain Mike's Charters</a></h3>
+      <p class="stack">React · TypeScript · Supabase · Postgres RLS · Edge Functions</p>
+      <p>Booking platform built for a working charter fishing business. Customers book trips, double-booking is blocked at the database layer, confirmation emails fire on submit, and the owner manages the calendar from an admin dashboard.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/mayman20/Delivery-Tracker">Delivery Tracker</a></h3>
+      <p class="stack">JavaScript · Firebase RTDB</p>
+      <p>Real-time delivery-driver tracking with role-based dashboards: live driver locations and estimated return times for a high-volume pizza restaurant.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Open Source</h2>
+    <div class="card">
+      <h3><a href="https://github.com/instaloader/instaloader/pull/2712">instaloader #2712 — fix caption mentions dropped after newlines</a></h3>
+      <p class="stack">Python · 12.7k★ library</p>
+      <p>Root-caused a four-year-old regression in the mention-parsing regex (a 2022 commit excluded newlines from the character class), restored correct behavior, and added a regression test.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Stone Harbor, NJ · Narragansett, RI</p>
+  </footer>
 </body>
 </html>
