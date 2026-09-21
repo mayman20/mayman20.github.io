@@ -39,6 +39,7 @@
     .links { margin-top: 1rem; display: flex; gap: 1.25rem; flex-wrap: wrap; }
     .links a { color: var(--accent); text-decoration: none; font-weight: 500; }
     .links a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
     section { margin-top: 3rem; }
     h2 {
       font-size: 0.85rem;
@@ -85,17 +86,19 @@
     <div class="card">
       <h3><a href="https://github.com/mayman20/financial-data-platform">Real-Time Financial Data Platform</a></h3>
       <p class="stack">Python · GCP · AWS Lightsail · systemd · PostgreSQL</p>
-      <p>Multi-service platform ingesting live data from six external APIs 24/7, with a statistical validation layer (out-of-sample testing, permutation tests, negative controls) gating what gets deployed, and always-on paper-trading services with journal-based crash recovery and Telegram alerting.</p>
+      <p>Research and paper-trading infrastructure with market-data ingestion, statistical validation tools, structured journals, and service monitoring. The public repository shares architecture documentation and a reusable Python validation library; account-connected services remain private.</p>
     </div>
     <div class="card">
       <h3><a href="https://github.com/mayman20/captain-mikes-charters">Captain Mike's Charters</a></h3>
-      <p class="stack">React · TypeScript · Supabase · Postgres RLS · Edge Functions</p>
-      <p>Booking platform built for a working charter fishing business. Customers book trips, double-booking is blocked at the database layer, confirmation emails fire on submit, and the owner manages the calendar from an admin dashboard.</p>
+      <p class="stack">React · TypeScript · Vite · FishingBooker</p>
+      <p>A client website for Pushing Limits Sportfishing in Point Judith, RI. The current site presents trips and policies and integrates FishingBooker for availability and checkout. An earlier Supabase booking platform, including database-level double-booking protection, is preserved in the repository.</p>
+      <nav class="links" aria-label="Charter project links"><a href="https://pushinglimitssportfishing.com/">Visit live site</a><a href="https://github.com/mayman20/captain-mikes-charters/tree/booking-platform-v1">Original booking platform</a></nav>
     </div>
     <div class="card">
       <h3><a href="https://github.com/mayman20/Delivery-Tracker">Delivery Tracker</a></h3>
-      <p class="stack">JavaScript · Firebase RTDB</p>
-      <p>Real-time delivery-driver tracking with role-based dashboards: live driver locations and estimated return times for a high-volume pizza restaurant.</p>
+      <p class="stack">JavaScript · Firebase · Leaflet</p>
+      <p>Driver and dispatcher dashboards with a standalone, no-account demo. Try status changes and simulated routes using fictional drivers. The separate Firebase application provides the account-based location-sharing workflow.</p>
+      <nav class="links" aria-label="Delivery project links"><a href="https://mayman20.github.io/Delivery-Tracker/demo.html">Try interactive demo</a></nav>
     </div>
   </section>
 
@@ -103,7 +106,7 @@
     <h2>Open Source</h2>
     <div class="card">
       <h3><a href="https://github.com/instaloader/instaloader/pull/2712">instaloader #2712 — fix caption mentions dropped after newlines</a></h3>
-      <p class="stack">Python · 12.7k★ library</p>
+      <p class="stack">Python · Merged open-source contribution</p>
       <p>Root-caused a four-year-old regression in the mention-parsing regex (a 2022 commit excluded newlines from the character class), restored correct behavior, and added a regression test.</p>
     </div>
   </section>
