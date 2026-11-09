@@ -110,6 +110,11 @@
       <p class="stack">Python · Merged open-source contribution</p>
       <p>Root-caused a four-year-old regression in the mention-parsing regex (a 2022 commit excluded newlines from the character class), restored correct behavior, and added a regression test.</p>
     </div>
+    <div class="card">
+      <h3><a href="https://github.com/spotDL/spotify-downloader/pull/2751">spotDL #2751 — fix Windows playlist paths ending in a backslash</a></h3>
+      <p class="stack">Python · Merged open-source contribution</p>
+      <p>Traced hidden <code>.m3u8</code> files on Windows to a string-literal bug: both backslash checks compared against two characters, so a normal folder path ending in one backslash skipped the directory guard. Replaced them with a single check and added a regression test.</p>
+    </div>
   </section>
 
   <footer>
