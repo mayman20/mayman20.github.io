@@ -1,0 +1,1406 @@
+{
+  "summary": {
+    "0 bp (false-positive rate)": "detected 0/20",
+    "5 bp (detection rate)": "detected 0/20",
+    "10 bp (detection rate)": "detected 12/20",
+    "20 bp (detection rate)": "detected 20/20",
+    "40 bp (detection rate)": "detected 20/20",
+    "Rebalancer": "holds 50/40/10 within 2.43% drift"
+  },
+  "detection_rates": [
+    {
+      "effect_bps": 0,
+      "detected": 0,
+      "trials": 20,
+      "kind": "false-positive rate"
+    },
+    {
+      "effect_bps": 5,
+      "detected": 0,
+      "trials": 20,
+      "kind": "detection rate"
+    },
+    {
+      "effect_bps": 10,
+      "detected": 12,
+      "trials": 20,
+      "kind": "detection rate"
+    },
+    {
+      "effect_bps": 20,
+      "detected": 20,
+      "trials": 20,
+      "kind": "detection rate"
+    },
+    {
+      "effect_bps": 40,
+      "detected": 20,
+      "trials": 20,
+      "kind": "detection rate"
+    }
+  ],
+  "dataset": {
+    "kind": "synthetic",
+    "seed": 42,
+    "observations_per_asset": 260,
+    "symbols": [
+      "EQ",
+      "BOND",
+      "GOLD"
+    ],
+    "generator": "fdp.synthetic.generate_fixtures",
+    "price_process": "independent zero-drift Gaussian log increments",
+    "headline_process": "independent uniform choice; no relationship to prices",
+    "rights": "Generated for this repository; MIT license",
+    "planted": {
+      "kind": "synthetic planted signal",
+      "seed": 43,
+      "sessions": 5200,
+      "conditional_effect_bps": 20,
+      "innovation_sd_bps": 60,
+      "cost_bps_per_exposure_change": 5,
+      "demo_guard_reset_sessions": 5,
+      "timing": "prior-day headline -> decision close -> following interval",
+      "design": "predeclared effect grid; paired noise and headlines, no winning-seed selection"
+    },
+    "detection_power": {
+      "effects": [
+        {
+          "effect_bps": 0,
+          "design": {
+            "kind": "synthetic planted signal",
+            "seed": "each seed listed below",
+            "sessions": 5200,
+            "conditional_effect_bps": 0,
+            "innovation_sd_bps": 60,
+            "cost_bps_per_exposure_change": 5,
+            "demo_guard_reset_sessions": 5,
+            "timing": "prior-day headline -> decision close -> following interval",
+            "design": "predeclared effect grid; paired noise and headlines, no winning-seed selection"
+          },
+          "runs": [
+            {
+              "seed": 100,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 101,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 102,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 103,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 104,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 105,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 106,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 107,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 108,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 109,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 110,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 111,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 112,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 113,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 114,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 115,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 116,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 117,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 118,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 119,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            }
+          ],
+          "detections": 0,
+          "trials": 20,
+          "interpretation": "Empirical all-gate detection frequency; 20 runs is an imprecise power estimate. Predeclared effect grid; no winning-seed selection."
+        },
+        {
+          "effect_bps": 5,
+          "design": {
+            "kind": "synthetic planted signal",
+            "seed": "each seed listed below",
+            "sessions": 5200,
+            "conditional_effect_bps": 5,
+            "innovation_sd_bps": 60,
+            "cost_bps_per_exposure_change": 5,
+            "demo_guard_reset_sessions": 5,
+            "timing": "prior-day headline -> decision close -> following interval",
+            "design": "predeclared effect grid; paired noise and headlines, no winning-seed selection"
+          },
+          "runs": [
+            {
+              "seed": 100,
+              "detected": false,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.176
+            },
+            {
+              "seed": 101,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.924
+            },
+            {
+              "seed": 102,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.874
+            },
+            {
+              "seed": 103,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.998
+            },
+            {
+              "seed": 104,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.99
+            },
+            {
+              "seed": 105,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.998
+            },
+            {
+              "seed": 106,
+              "detected": false,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.236
+            },
+            {
+              "seed": 107,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.978
+            },
+            {
+              "seed": 108,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.82
+            },
+            {
+              "seed": 109,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.838
+            },
+            {
+              "seed": 110,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.738
+            },
+            {
+              "seed": 111,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 112,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.958
+            },
+            {
+              "seed": 113,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.738
+            },
+            {
+              "seed": 114,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.936
+            },
+            {
+              "seed": 115,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 1.0
+            },
+            {
+              "seed": 116,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.752
+            },
+            {
+              "seed": 117,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.942
+            },
+            {
+              "seed": 118,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.532
+            },
+            {
+              "seed": 119,
+              "detected": false,
+              "gates": {
+                "positive_return": false,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.546
+            }
+          ],
+          "detections": 0,
+          "trials": 20,
+          "interpretation": "Empirical all-gate detection frequency; 20 runs is an imprecise power estimate. Predeclared effect grid; no winning-seed selection."
+        },
+        {
+          "effect_bps": 10,
+          "design": {
+            "kind": "synthetic planted signal",
+            "seed": "each seed listed below",
+            "sessions": 5200,
+            "conditional_effect_bps": 10,
+            "innovation_sd_bps": 60,
+            "cost_bps_per_exposure_change": 5,
+            "demo_guard_reset_sessions": 5,
+            "timing": "prior-day headline -> decision close -> following interval",
+            "design": "predeclared effect grid; paired noise and headlines, no winning-seed selection"
+          },
+          "runs": [
+            {
+              "seed": 100,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 101,
+              "detected": false,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.014
+            },
+            {
+              "seed": 102,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.012
+            },
+            {
+              "seed": 103,
+              "detected": false,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": false
+              },
+              "p_value": 0.158
+            },
+            {
+              "seed": 104,
+              "detected": false,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.086
+            },
+            {
+              "seed": 105,
+              "detected": false,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.156
+            },
+            {
+              "seed": 106,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 107,
+              "detected": false,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.034
+            },
+            {
+              "seed": 108,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 109,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 110,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 111,
+              "detected": false,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.23
+            },
+            {
+              "seed": 112,
+              "detected": false,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.026
+            },
+            {
+              "seed": 113,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.006
+            },
+            {
+              "seed": 114,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.018
+            },
+            {
+              "seed": 115,
+              "detected": false,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": false,
+                "deflated_sharpe_above_095": false,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.15
+            },
+            {
+              "seed": 116,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 117,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.012
+            },
+            {
+              "seed": 118,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 119,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            }
+          ],
+          "detections": 12,
+          "trials": 20,
+          "interpretation": "Empirical all-gate detection frequency; 20 runs is an imprecise power estimate. Predeclared effect grid; no winning-seed selection."
+        },
+        {
+          "effect_bps": 20,
+          "design": {
+            "kind": "synthetic planted signal",
+            "seed": "each seed listed below",
+            "sessions": 5200,
+            "conditional_effect_bps": 20,
+            "innovation_sd_bps": 60,
+            "cost_bps_per_exposure_change": 5,
+            "demo_guard_reset_sessions": 5,
+            "timing": "prior-day headline -> decision close -> following interval",
+            "design": "predeclared effect grid; paired noise and headlines, no winning-seed selection"
+          },
+          "runs": [
+            {
+              "seed": 100,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 101,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 102,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 103,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 104,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 105,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 106,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 107,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 108,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 109,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 110,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 111,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 112,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 113,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 114,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 115,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 116,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 117,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 118,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 119,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            }
+          ],
+          "detections": 20,
+          "trials": 20,
+          "interpretation": "Empirical all-gate detection frequency; 20 runs is an imprecise power estimate. Predeclared effect grid; no winning-seed selection."
+        },
+        {
+          "effect_bps": 40,
+          "design": {
+            "kind": "synthetic planted signal",
+            "seed": "each seed listed below",
+            "sessions": 5200,
+            "conditional_effect_bps": 40,
+            "innovation_sd_bps": 60,
+            "cost_bps_per_exposure_change": 5,
+            "demo_guard_reset_sessions": 5,
+            "timing": "prior-day headline -> decision close -> following interval",
+            "design": "predeclared effect grid; paired noise and headlines, no winning-seed selection"
+          },
+          "runs": [
+            {
+              "seed": 100,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 101,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 102,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 103,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 104,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 105,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 106,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 107,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 108,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 109,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 110,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 111,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 112,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 113,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 114,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 115,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 116,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 117,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 118,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            },
+            {
+              "seed": 119,
+              "detected": true,
+              "gates": {
+                "positive_return": true,
+                "sign_randomization_p_below_005": true,
+                "deflated_sharpe_above_095": true,
+                "bootstrap_p5_above_080": true
+              },
+              "p_value": 0.002
+            }
+          ],
+          "detections": 20,
+          "trials": 20,
+          "interpretation": "Empirical all-gate detection frequency; 20 runs is an imprecise power estimate. Predeclared effect grid; no winning-seed selection."
+        }
+      ],
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "interpretation": "0 bp estimates false positives; other rows estimate detection power. Twenty trials per row are imprecise. Paired innovations/headlines across effects."
+    }
+  },
+  "rows": {
+    "prices": 780,
+    "news": 260
+  },
+  "validation": {
+    "Pure noise": {
+      "observations": 260,
+      "trials_assumed": 2,
+      "sharpe": -1.9656360042356205,
+      "total_return": -0.20196199224490685,
+      "gates": {
+        "positive_return": false,
+        "sign_randomization_p_below_005": false,
+        "deflated_sharpe_above_095": false,
+        "bootstrap_p5_above_080": false
+      },
+      "passes_all_gates": false,
+      "dsr": {
+        "dsr": 0.0079,
+        "expected_max_sharpe": 0.032234,
+        "expected_max_sharpe_annualized": 0.5117,
+        "is_significant": false,
+        "observed_sharpe": -1.9656,
+        "observed_sr_per_obs": -0.123823,
+        "n_trials": 2,
+        "se_sharpe": 0.06467
+      },
+      "permutation": {
+        "p_value": 0.976,
+        "observed_mean": -0.000844,
+        "perm_mean": -2.8e-05,
+        "perm_std": 0.000421,
+        "is_significant": false,
+        "n_perms": 499
+      },
+      "bootstrap": {
+        "terminal_equity": {
+          "p5": 0.6916,
+          "p25": 0.7571,
+          "p50": 0.8089,
+          "p75": 0.8601,
+          "p95": 0.9406
+        },
+        "max_drawdown": {
+          "p5": 0.1223,
+          "p50": 0.2179,
+          "p95": 0.3177
+        },
+        "bust_probability": 0.0,
+        "n_boots": 299,
+        "n_trades": 260
+      }
+    },
+    "Planted signal": {
+      "observations": 5200,
+      "trials_assumed": 2,
+      "sharpe": 1.8889991377477664,
+      "total_return": 8.845522734307796,
+      "gates": {
+        "positive_return": true,
+        "sign_randomization_p_below_005": true,
+        "deflated_sharpe_above_095": true,
+        "bootstrap_p5_above_080": true
+      },
+      "passes_all_gates": true,
+      "dsr": {
+        "dsr": 1.0,
+        "expected_max_sharpe": 0.007208,
+        "expected_max_sharpe_annualized": 0.1144,
+        "is_significant": true,
+        "observed_sharpe": 1.889,
+        "observed_sr_per_obs": 0.118996,
+        "n_trials": 2,
+        "se_sharpe": 0.013285
+      },
+      "permutation": {
+        "p_value": 0.002,
+        "observed_mean": 0.000447,
+        "perm_mean": -0.0,
+        "perm_std": 5.5e-05,
+        "is_significant": true,
+        "n_perms": 499
+      },
+      "bootstrap": {
+        "terminal_equity": {
+          "p5": 6.3333,
+          "p25": 8.078,
+          "p50": 9.7857,
+          "p75": 11.5347,
+          "p95": 15.154
+        },
+        "max_drawdown": {
+          "p5": 0.0511,
+          "p50": 0.0709,
+          "p95": 0.106
+        },
+        "bust_probability": 0.0,
+        "n_boots": 299,
+        "n_trades": 5200
+      }
+    }
+  },
+  "allocation": {
+    "target_weights": {
+      "EQ": 0.5,
+      "BOND": 0.4,
+      "GOLD": 0.1
+    },
+    "final_weights": {
+      "EQ": 0.4937279141259307,
+      "BOND": 0.4018944828140444,
+      "GOLD": 0.10437760306002514
+    },
+    "max_drift_pct_points": 2.426193450650338,
+    "turnover_starting_capital": 1.1960076140828524,
+    "cost_starting_capital": 0.0005980038070414264
+  }
+}
